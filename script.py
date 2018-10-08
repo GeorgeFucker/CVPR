@@ -59,15 +59,3 @@ cv2.imshow('foto', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
-# In[ ]:
-
-
-img_height
-
-
-# In[10]:
-
-
-type((1, 2, 3))
-
