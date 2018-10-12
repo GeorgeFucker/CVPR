@@ -1,14 +1,14 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import cv2
 import numpy as np
 
 
-# In[15]:
+# In[2]:
 
 
 cap = cv2.VideoCapture(0)
@@ -30,14 +30,15 @@ cap.release()
 cv2.destroyAllWindows()        
 
 
-# In[ ]:
+# In[9]:
 
 
 # Read image from disk in grayscale
 img = cv2.imread('foto.jpeg', cv2.IMREAD_GRAYSCALE)
+img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
 
 # Define image shape
-img_width, img_height = img.shape
+img_width, img_height = img.shape[:2]
 
 # Define color of the line and reacntangle
 line_color = tuple(np.random.random(3) * 255)
